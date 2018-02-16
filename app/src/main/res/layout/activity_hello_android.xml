@@ -1,89 +1,73 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#04b3e0"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".HelloAndroid">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/android_hi"
-        android:textSize="24sp"
-        android:layout_margin="16dp"
-        android:textColor="#ffff"
-        android:textStyle="italic"
-        android:fontFamily="sans-serif-medium"
-        android:text="An investment in Knowledge pays the best interest\n\n  - Benjamin Franklin"/>
-
-
-    <ImageView
-        android:id="@+id/android_hi"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/udacity"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="40dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/android_doodle"
-        />
-    <ImageView
-        android:id="@+id/udacity"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="30dp"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/udacity_logo" />
-    <TextView
-        android:id="@+id/udacity_text"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="34sp"
-        android:paddingTop="20dp"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="@android:color/white"
-        android:layout_toRightOf="@id/udacity"
-        android:text="Udacity"
-        />
-    <TextView
-        android:id="@+id/address"
+        android:background="@drawable/background_color"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/description_img_1"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/udacity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/title"
+            android:textColor="#F5F5F5"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/quote"
+            android:textColor="#000"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif"
-        android:layout_below="@id/udacity_text"
-        android:layout_toRightOf="@id/udacity"
-        android:text="2465 Latham St"
-        android:textColor="@android:color/white"
-        />
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="#F5F5F5"
+        android:layout_weight="2">
 
-    <TextView
-        android:id="@+id/address_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:fontFamily="sans-serif"
-        android:layout_below="@id/address"
-        android:layout_toRightOf="@id/udacity"
-        android:text="Mountain View, CA 94043"
-        android:textColor="@android:color/white"
-        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="280dp"
+            android:contentDescription="@string/description_img_2"
+            android:src="@drawable/android_doodle_2"/>
 
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:fontFamily="sans-serif"
-        android:layout_below="@id/address_2"
-        android:layout_toRightOf="@id/udacity"
-        android:text="650-555-5555"
-        android:textColor="@android:color/white"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/address"
+            android:textColor="#4FC0C4"
+            android:textSize="14sp" />
+
+    </LinearLayout>
 
 
 
-</RelativeLayout>
+</LinearLayout>
 
